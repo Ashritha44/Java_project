@@ -1,0 +1,20 @@
+package ArrayDsa;
+import java.util.Arrays;
+public class Fnd_sorted_array_element {
+public static void main(String args[]) {
+	int arr[] = {1,2,3,4,6,7};
+	Arrays.sort(arr);
+	int target = 6;
+	boolean found = false;
+	
+	for(int i =0;i<arr.length;i++) {
+		if(arr[i]==target) {
+			found=true;
+		}
+		if(arr[i]>target) {
+			break;
+		}
+	}
+	System.out.println(found?"found element":"not found");
+}
+}
